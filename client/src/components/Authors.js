@@ -1,5 +1,5 @@
 import React  from 'react';
-import gql from 'graphql-tag';
+import GET_AUTHORS from '../queries/getAuthor';
 import { useQuery } from '@apollo/react-hooks';
 
 import {
@@ -10,15 +10,6 @@ import {
   Container
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-
-const GET_AUTHORS = gql`
-    {
-        authors {
-            id
-            name
-        }
-    }
-`;
 
 function Authors() {
   const { loading, error, data } = useQuery(GET_AUTHORS);

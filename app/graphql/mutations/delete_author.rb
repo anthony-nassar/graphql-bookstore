@@ -3,7 +3,7 @@ class Mutations::DeleteAuthor < Mutations::BaseMutation
 
   argument :id, ID, required: true
 
-  field :author, AuthorType, null: true
+  field :author, Types::AuthorType, null: true
   field :errors, [String], null: false
 
   def resolve(id:)

@@ -5,7 +5,7 @@ class Mutations::CreateBook < Mutations::BaseMutation
   argument :title, String, required: false
   argument :genre, String, required: false
 
-  field :book, BookType, null: true
+  field :book, Types::BookType, null: true
   field :errors, [String], null: false
 
   def resolve(author_id:, title:, genre:)

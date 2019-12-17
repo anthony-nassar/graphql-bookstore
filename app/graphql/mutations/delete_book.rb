@@ -3,7 +3,7 @@ class Mutations::DeleteBook < Mutations::BaseMutation
 
   argument :id, ID, required: true
 
-  field :book, BookType, null: true
+  field :book, Types::BookType, null: true
   field :errors, [String], null: false
 
   def resolve(id:)

@@ -5,7 +5,7 @@ class Mutations::UpdateAuthor < Mutations::BaseMutation
   argument :name, String, required: true
   argument :age, Integer, required: false
 
-  field :author, AuthorType, null: true
+  field :author, Types::AuthorType, null: true
   field :errors, [String], null: false
 
   def resolve(id:, name:, age:)

@@ -1,5 +1,5 @@
 import React  from 'react';
-import GET_AUTHORS from '../queries/getAuthor';
+import GET_AUTHORS from '../queries/getAuthors';
 import { useQuery } from '@apollo/react-hooks';
 
 import {
